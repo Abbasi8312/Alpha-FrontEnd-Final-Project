@@ -1,0 +1,168 @@
+<!doctype html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="/src/styles/fonts.css" rel="stylesheet">
+    <link href="/src/styles/index.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': "#2C7EF8",
+                        'primary-hover-light': "#075CD9",
+                        'on-primary-light': "#FFFFFF",
+                        'background-light': "#FFFFFF",
+                        'on-background-light': "#191C1E",
+                        'surface-light': "#FFFFFF",
+                        'neutral-1': "#000000",
+                        'neutral-2': "#323233",
+                        'neutral-3': "#646466",
+                        'neutral-4': "#7D7D7F",
+                        'neutral-5': "#AFAEB2",
+                        'neutral-6': "#C8C7CB",
+                        'neutral-7': "#E1E0E5",
+                        'neutral-8': "#E1E0E5",
+                        'neutral-9': "#F5F6F8",
+                        'neutral-10': "#FEFEFE",
+                        'neutral-11': "#FFFFFF",
+                        'errors': "#E63946",
+                        'success': "#90F677",
+                    },
+                    fontFamily: {
+                        'yekanbakh': ['YekanBakh', 'sans-serif'],
+                    },
+                    fontWeight: {
+                        regular: '400',
+                        medium: '900',
+                    },
+                    fontSize: {
+                        '10': ['10px', {lineHeight: '15.5px'}],
+                        '11': ['11px', {lineHeight: '17.05px'}],
+                        '12': ['12px', {lineHeight: '18.6px'}],
+                        '13': ['13px', {lineHeight: '20.15px'}],
+                        '14': ['14px', {lineHeight: '21.7px'}],
+                        '16': ['16px', {lineHeight: '24.8px'}],
+                        '18': ['18px', {lineHeight: '27.9px'}],
+                        '20': ['20px', {lineHeight: '31px'}],
+                        '24': ['24px', {lineHeight: '37.2px'}],
+                        '28': ['28px', {lineHeight: '43.4px'}],
+                        '32': ['32px', {lineHeight: '49.6px'}],
+                        '36': ['36px', {lineHeight: '55.8px'}],
+                        '42': ['42px', {lineHeight: '65.1px'}],
+                    },
+                    screens: {
+                        'sm': '360px',
+                    },
+                },
+            }
+        }
+    </script>
+    <title>Quera List</title>
+</head>
+
+<body class="font-yekanbakh text-center">
+<div class="mx-auto relative overflow-x-clip">
+    <header class="header px-4 py-3 lg:px-[104px] lg:py-6 flex justify-between items-center max-w-[1232px]">
+        <button class="lg:hidden">
+            <svg fill="none" height="24" viewBox="0 0 24 25" width="24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 7.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
+                <path d="M3 12.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
+                <path d="M3 17.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
+            </svg>
+        </button>
+        <div class="header__head flex gap-[72px] items-center">
+            <a class="header__head__logo font-semibold text-16 lg:text-20 text-[#141414]"
+               href="#">
+                کوئرا لیست
+            </a>
+            <nav class="header__head__nav hidden lg:flex gap-[72px] items-center font-semibold text-16 whitespace-nowrap">
+                <a class="header__head__nav__home text-primary" href="#">صفحه اصلی</a>
+                <a class="header__head__nav__about text-[#666666]" href="#">درباره ما</a>
+                <a class="header__head__nav__contact text-[#666666]" href="#">ارتباط با ما</a>
+            </nav>
+        </div>
+        <div class="lg:hidden">
+            <div class="h-6 w-6"></div>
+        </div>
+        <div class="header__utility items-center gap-4 hidden lg:flex">
+            <button
+                    class="header__utility__login-button bg-primary rounded-md gap-[51px] h-10 px-6 py-2">
+                <span class="text-neutral-11 font-semibold text-16">ورود به اپلیکیشن</span>
+            </button>
+            <button class="header__utility__dark-mode-button rounded-md border border-[#E3E3E3] w-10 h-10">
+                <svg class="m-auto" fill="none" height="24" viewBox="0 0 24 24" width="24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5856 17.1379V6.93105C12.5856 6.79312 12.5166 6.72415 12.3787 6.72415C9.41319 6.72415 7.06836 9.06898 7.06836 12.0345C7.06836 15 9.41319 17.3448 12.3787 17.3448C12.4477 17.4138 12.5856 17.2759 12.5856 17.1379Z"
+                          fill="#5C5F61"/>
+                    <path d="M17.9653 11.8965C17.8274 9.34482 16.0343 7.27585 13.5515 6.86206C13.4136 6.86206 13.3446 6.93103 13.2756 7.06896C13.2756 7.13792 13.2756 7.20689 13.3446 7.27585C14.7929 8.3793 15.6894 10.1034 15.6894 11.9655C15.8963 13.9655 14.9998 15.8965 13.3446 17.069C13.2756 17.1379 13.2067 17.2759 13.2756 17.3448C13.3446 17.4138 13.4136 17.4138 13.4825 17.4138C13.4825 17.4138 13.4825 17.4138 13.5515 17.4138C16.1722 16.931 18.0343 14.5862 17.9653 11.8965Z"
+                          fill="#5C5F61"/>
+                    <path d="M12.3105 5.55172C12.6553 5.55172 12.8622 5.27586 12.8622 5V1.55172C12.8622 1.2069 12.5864 1 12.3105 1C11.9657 1 11.7588 1.27586 11.7588 1.55172V4.93103C11.7588 5.27586 12.0347 5.55172 12.3105 5.55172Z"
+                          fill="#5C5F61"/>
+                    <path d="M6.93066 7.4138C7.13756 7.62069 7.48239 7.62069 7.75825 7.4138C7.96515 7.2069 7.96515 6.86207 7.75825 6.58621L5.41342 4.24138C5.20653 4.03449 4.8617 4.03449 4.58584 4.24138C4.37894 4.44828 4.37894 4.79311 4.58584 5.06897L6.93066 7.4138Z"
+                          fill="#5C5F61"/>
+                    <path d="M12.3105 18.5172C11.9657 18.5172 11.7588 18.7931 11.7588 19.069V22.4483C11.7588 22.7931 12.0347 23 12.3105 23C12.5864 23 12.8622 22.7241 12.8622 22.4483V19.069C12.9312 18.7931 12.6553 18.5172 12.3105 18.5172Z"
+                          fill="#5C5F61"/>
+                    <path d="M7.34446 16.4483C7.20653 16.4483 7.06859 16.5172 6.93066 16.5862L4.58584 18.931C4.37894 19.1379 4.37894 19.4828 4.58584 19.7586C4.79273 19.9655 5.13756 19.9655 5.41342 19.7586L7.75825 17.4138C7.96515 17.2069 7.96515 16.8621 7.75825 16.5862C7.62032 16.5172 7.48239 16.4483 7.34446 16.4483Z"
+                          fill="#5C5F61"/>
+                    <path d="M5.82759 12.0345C5.82759 11.6897 5.55172 11.4828 5.27586 11.4828H1.55172C1.2069 11.4828 1 11.7586 1 12.1034C1 12.3793 1.27586 12.6552 1.55172 12.6552H5.2069C5.55172 12.5862 5.82759 12.3793 5.82759 12.0345Z"
+                          fill="#5C5F61"/>
+                    <path d="M19.2755 5.55173C18.5858 5.34484 18.4479 5.20691 18.31 4.31036C18.31 4.24139 18.241 4.17242 18.172 4.17242C18.1031 4.17242 18.0341 4.24139 18.0341 4.31036C17.8962 5.20691 17.7582 5.34484 17.0686 5.55173C16.9996 5.55173 16.9307 5.68967 16.9307 5.75863C16.9307 5.8276 16.9996 5.8276 17.0686 5.89656C17.7582 6.10346 17.8962 6.24139 18.0341 7.13794C18.0341 7.20691 18.1031 7.27587 18.172 7.27587C18.241 7.27587 18.31 7.20691 18.31 7.13794C18.4479 6.24139 18.5858 6.10346 19.2755 5.89656C19.3445 5.89656 19.4134 5.75863 19.4134 5.68967C19.3445 5.55173 19.3445 5.55173 19.2755 5.55173Z"
+                          fill="#5C5F61"/>
+                    <path d="M19.2755 18.5172C18.5858 18.3104 18.4479 18.1724 18.31 17.2759C18.31 17.2069 18.241 17.1379 18.172 17.1379C18.1031 17.1379 18.0341 17.2069 18.0341 17.2759C17.8962 18.1724 17.7582 18.3104 17.0686 18.5172C16.9996 18.5172 16.9307 18.6552 16.9307 18.7241C16.9307 18.7931 16.9996 18.7931 17.0686 18.8621C17.7582 19.069 17.8962 19.2069 18.0341 20.1035C18.0341 20.1724 18.1031 20.2414 18.172 20.2414C18.241 20.2414 18.31 20.1724 18.31 20.1035C18.4479 19.2069 18.5858 19.069 19.2755 18.8621C19.3445 18.8621 19.4134 18.7931 19.4134 18.7241C19.4134 18.5862 19.3445 18.5172 19.2755 18.5172Z"
+                          fill="#5C5F61"/>
+                    <path d="M22.5175 11.8276C21.552 11.5517 21.4141 11.2759 21.2072 10.1034C21.2072 10.0345 21.1382 9.96552 21.0692 9.96552C21.0003 9.96552 20.9313 10.0345 20.9313 10.1034C20.7244 11.2759 20.5175 11.4828 19.552 11.7586C19.483 11.7586 19.4141 11.8276 19.4141 11.9655C19.4141 12.0345 19.483 12.0345 19.483 12.1034C20.4485 12.3793 20.5865 12.6552 20.7934 13.8276C20.7934 13.8965 20.8623 13.9655 20.9313 13.9655C21.0003 13.9655 21.0692 13.8965 21.0692 13.8276C21.2761 12.6552 21.483 12.4483 22.4485 12.1724C22.5175 12.1724 22.5865 12.1034 22.5865 11.9655C22.5865 11.8965 22.5865 11.8276 22.5175 11.8276Z"
+                          fill="#5C5F61"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="mx-auto flex flex-col items-center gap-1 mt-[70px]">
+            <div class="font-regular text-24 text-[#141414] h-[43px]">
+                تمرکز رو وارد زندگیت کن
+            </div>
+            <div class="font-medium text-28 text-[#141414] h-[50px]">
+                به سمت
+                <span>اهدافت</span>
+                اوج بگیر
+            </div>
+        </div>
+        <div class="shapes">
+            <div class="shapes__rectangle -z-10 w-full h-[583px] absolute top-[49px]"></div>
+            <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[228px] h-[228px] absolute top-[390px] left-[434px] opacity-50 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
+            <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[228px] h-[228px] absolute top-[291px] left-[114px] opacity-50 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
+            <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[265px] h-[265px] absolute top-[1229px] left-[476px] opacity-30 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
+            <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[269px] h-[269px] absolute top-[2370px] left-[456px] opacity-15 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
+            <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[269px] h-[269px] absolute top-[1706px] left-[115px] opacity-30 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
+            <svg class="shapes__star -z-10 absolute top-[232px] left-[40px]" fill="none"
+                 height="24"
+                 viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd"
+                      d="M10.6178 0.9886C11.0679 -0.329535 12.9321 -0.329531 13.3822 0.9886L15.8334 8.16657L23.0114 10.6178C24.3295 11.0679 24.3295 12.9321 23.0114 13.3822L15.8334 15.8334L13.3822 23.0114C12.9321 24.3295 11.0679 24.3295 10.6178 23.0114L8.16657 15.8334L0.9886 13.3822C-0.329535 12.9321 -0.329532 11.0679 0.9886 10.6178L8.16657 8.16657L10.6178 0.9886Z"
+                      fill="#2C7EF8"
+                      fill-rule="evenodd"/>
+            </svg>
+            <svg class="shapes__star -z-10 absolute top-[89px] left-[296px]" fill="none"
+                 height="24"
+                 viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd"
+                      d="M10.6178 0.9886C11.0679 -0.329535 12.9321 -0.329531 13.3822 0.9886L15.8334 8.16657L23.0114 10.6178C24.3295 11.0679 24.3295 12.9321 23.0114 13.3822L15.8334 15.8334L13.3822 23.0114C12.9321 24.3295 11.0679 24.3295 10.6178 23.0114L8.16657 15.8334L0.9886 13.3822C-0.329535 12.9321 -0.329532 11.0679 0.9886 10.6178L8.16657 8.16657L10.6178 0.9886Z"
+                      fill="#2C7EF8"
+                      fill-rule="evenodd"/>
+            </svg>
+            <svg class="shapes__vector -z-10 absolute top-[205px] left-[142.98px] w-[101.42px] h-[21.16px]"
+                 fill="none" height="11" viewBox="0 0 108 11" width="108" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.99931 8.78032C1.99931 8.78032 21.2148 3.73979 52.1342 2.87587C83.0537 2.01195 105.585 7.09068 105.585 7.09068"
+                      stroke="#2C7EF8" stroke-linecap="round" stroke-width="4"/>
+            </svg>
+        </div>
+    </main>
+</div>
+</body>
+</html>
