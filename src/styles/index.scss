@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .shapes {
   &__circle {
     background: linear-gradient(162.19deg, rgba(239, 235, 255, 0) 32.45%, #EBEBFB 79.35%);

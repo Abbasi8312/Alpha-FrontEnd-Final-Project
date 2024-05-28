@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="/src/styles/fonts.css" rel="stylesheet">
     <link href="/src/styles/index.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            container: {
+                center: true,
+            },
             theme: {
                 extend: {
                     colors: {
@@ -41,19 +44,19 @@
                         medium: '900',
                     },
                     fontSize: {
-                        '10': ['10px', {lineHeight: '15.5px'}],
-                        '11': ['11px', {lineHeight: '17.05px'}],
-                        '12': ['12px', {lineHeight: '18.6px'}],
-                        '13': ['13px', {lineHeight: '20.15px'}],
-                        '14': ['14px', {lineHeight: '21.7px'}],
-                        '16': ['16px', {lineHeight: '24.8px'}],
-                        '18': ['18px', {lineHeight: '27.9px'}],
-                        '20': ['20px', {lineHeight: '31px'}],
-                        '24': ['24px', {lineHeight: '37.2px'}],
-                        '28': ['28px', {lineHeight: '43.4px'}],
-                        '32': ['32px', {lineHeight: '49.6px'}],
-                        '36': ['36px', {lineHeight: '55.8px'}],
-                        '42': ['42px', {lineHeight: '65.1px'}],
+                        '10': ['0.625rem', {lineHeight: '0.969rem'}],
+                        '11': ['0.6875rem', {lineHeight: '1.0669rem'}],
+                        '12': ['0.75rem', {lineHeight: '1.1625rem'}],
+                        '13': ['0.8125rem', {lineHeight: '1.2581rem'}],
+                        '14': ['0.875rem', {lineHeight: '1.3538rem'}],
+                        '16': ['1rem', {lineHeight: '1.55rem'}],
+                        '18': ['1.125rem', {lineHeight: '1.7438rem'}],
+                        '20': ['1.25rem', {lineHeight: '1.9375rem'}],
+                        '24': ['1.5rem', {lineHeight: '2.325rem'}],
+                        '28': ['1.75rem', {lineHeight: '2.7125rem'}],
+                        '32': ['2rem', {lineHeight: '3.1rem'}],
+                        '36': ['2.25rem', {lineHeight: '3.4875rem'}],
+                        '42': ['2.625rem', {lineHeight: '4.0688rem'}]
                     },
                     screens: {
                         'sm': '360px',
@@ -66,225 +69,237 @@
 </head>
 
 <body class="font-yekanbakh text-center">
-<div class="relative overflow-x-clip mx-auto">
-    <header class="mx-4 header py-3 lg:px-[104px] lg:py-6 flex justify-between items-center max-w-[1232px]">
-        <button class="lg:hidden">
-            <svg fill="none" height="24" viewBox="0 0 24 25" width="24"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 7.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
-                <path d="M3 12.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
-                <path d="M3 17.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
-            </svg>
-        </button>
-        <div class="header__head flex gap-[72px] items-center">
-            <a class="header__head__logo font-semibold text-16 lg:text-20 text-[#141414]"
-               href="#">
-                کوئرا لیست
-            </a>
-            <nav class="header__head__nav hidden lg:flex gap-[72px] items-center font-semibold text-16 whitespace-nowrap">
-                <a class="header__head__nav__home text-primary" href="#">صفحه اصلی</a>
-                <a class="header__head__nav__about text-[#666666]" href="#">درباره ما</a>
-                <a class="header__head__nav__contact text-[#666666]" href="#">ارتباط با ما</a>
-            </nav>
-        </div>
-        <div class="lg:hidden">
-            <div class="h-6 w-6"></div>
-        </div>
-        <div class="header__utility items-center gap-4 hidden lg:flex">
-            <button
-                    class="header__utility__login-button bg-primary rounded-md gap-[51px] h-10 px-6 py-2">
-                <span class="text-neutral-11 font-semibold text-16">ورود به اپلیکیشن</span>
-            </button>
-            <button class="header__utility__dark-mode-button rounded-md border border-[#E3E3E3] w-10 h-10">
-                <svg class="m-auto" fill="none" height="24" viewBox="0 0 24 24" width="24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.5856 17.1379V6.93105C12.5856 6.79312 12.5166 6.72415 12.3787 6.72415C9.41319 6.72415 7.06836 9.06898 7.06836 12.0345C7.06836 15 9.41319 17.3448 12.3787 17.3448C12.4477 17.4138 12.5856 17.2759 12.5856 17.1379Z"
-                          fill="#5C5F61"/>
-                    <path d="M17.9653 11.8965C17.8274 9.34482 16.0343 7.27585 13.5515 6.86206C13.4136 6.86206 13.3446 6.93103 13.2756 7.06896C13.2756 7.13792 13.2756 7.20689 13.3446 7.27585C14.7929 8.3793 15.6894 10.1034 15.6894 11.9655C15.8963 13.9655 14.9998 15.8965 13.3446 17.069C13.2756 17.1379 13.2067 17.2759 13.2756 17.3448C13.3446 17.4138 13.4136 17.4138 13.4825 17.4138C13.4825 17.4138 13.4825 17.4138 13.5515 17.4138C16.1722 16.931 18.0343 14.5862 17.9653 11.8965Z"
-                          fill="#5C5F61"/>
-                    <path d="M12.3105 5.55172C12.6553 5.55172 12.8622 5.27586 12.8622 5V1.55172C12.8622 1.2069 12.5864 1 12.3105 1C11.9657 1 11.7588 1.27586 11.7588 1.55172V4.93103C11.7588 5.27586 12.0347 5.55172 12.3105 5.55172Z"
-                          fill="#5C5F61"/>
-                    <path d="M6.93066 7.4138C7.13756 7.62069 7.48239 7.62069 7.75825 7.4138C7.96515 7.2069 7.96515 6.86207 7.75825 6.58621L5.41342 4.24138C5.20653 4.03449 4.8617 4.03449 4.58584 4.24138C4.37894 4.44828 4.37894 4.79311 4.58584 5.06897L6.93066 7.4138Z"
-                          fill="#5C5F61"/>
-                    <path d="M12.3105 18.5172C11.9657 18.5172 11.7588 18.7931 11.7588 19.069V22.4483C11.7588 22.7931 12.0347 23 12.3105 23C12.5864 23 12.8622 22.7241 12.8622 22.4483V19.069C12.9312 18.7931 12.6553 18.5172 12.3105 18.5172Z"
-                          fill="#5C5F61"/>
-                    <path d="M7.34446 16.4483C7.20653 16.4483 7.06859 16.5172 6.93066 16.5862L4.58584 18.931C4.37894 19.1379 4.37894 19.4828 4.58584 19.7586C4.79273 19.9655 5.13756 19.9655 5.41342 19.7586L7.75825 17.4138C7.96515 17.2069 7.96515 16.8621 7.75825 16.5862C7.62032 16.5172 7.48239 16.4483 7.34446 16.4483Z"
-                          fill="#5C5F61"/>
-                    <path d="M5.82759 12.0345C5.82759 11.6897 5.55172 11.4828 5.27586 11.4828H1.55172C1.2069 11.4828 1 11.7586 1 12.1034C1 12.3793 1.27586 12.6552 1.55172 12.6552H5.2069C5.55172 12.5862 5.82759 12.3793 5.82759 12.0345Z"
-                          fill="#5C5F61"/>
-                    <path d="M19.2755 5.55173C18.5858 5.34484 18.4479 5.20691 18.31 4.31036C18.31 4.24139 18.241 4.17242 18.172 4.17242C18.1031 4.17242 18.0341 4.24139 18.0341 4.31036C17.8962 5.20691 17.7582 5.34484 17.0686 5.55173C16.9996 5.55173 16.9307 5.68967 16.9307 5.75863C16.9307 5.8276 16.9996 5.8276 17.0686 5.89656C17.7582 6.10346 17.8962 6.24139 18.0341 7.13794C18.0341 7.20691 18.1031 7.27587 18.172 7.27587C18.241 7.27587 18.31 7.20691 18.31 7.13794C18.4479 6.24139 18.5858 6.10346 19.2755 5.89656C19.3445 5.89656 19.4134 5.75863 19.4134 5.68967C19.3445 5.55173 19.3445 5.55173 19.2755 5.55173Z"
-                          fill="#5C5F61"/>
-                    <path d="M19.2755 18.5172C18.5858 18.3104 18.4479 18.1724 18.31 17.2759C18.31 17.2069 18.241 17.1379 18.172 17.1379C18.1031 17.1379 18.0341 17.2069 18.0341 17.2759C17.8962 18.1724 17.7582 18.3104 17.0686 18.5172C16.9996 18.5172 16.9307 18.6552 16.9307 18.7241C16.9307 18.7931 16.9996 18.7931 17.0686 18.8621C17.7582 19.069 17.8962 19.2069 18.0341 20.1035C18.0341 20.1724 18.1031 20.2414 18.172 20.2414C18.241 20.2414 18.31 20.1724 18.31 20.1035C18.4479 19.2069 18.5858 19.069 19.2755 18.8621C19.3445 18.8621 19.4134 18.7931 19.4134 18.7241C19.4134 18.5862 19.3445 18.5172 19.2755 18.5172Z"
-                          fill="#5C5F61"/>
-                    <path d="M22.5175 11.8276C21.552 11.5517 21.4141 11.2759 21.2072 10.1034C21.2072 10.0345 21.1382 9.96552 21.0692 9.96552C21.0003 9.96552 20.9313 10.0345 20.9313 10.1034C20.7244 11.2759 20.5175 11.4828 19.552 11.7586C19.483 11.7586 19.4141 11.8276 19.4141 11.9655C19.4141 12.0345 19.483 12.0345 19.483 12.1034C20.4485 12.3793 20.5865 12.6552 20.7934 13.8276C20.7934 13.8965 20.8623 13.9655 20.9313 13.9655C21.0003 13.9655 21.0692 13.8965 21.0692 13.8276C21.2761 12.6552 21.483 12.4483 22.4485 12.1724C22.5175 12.1724 22.5865 12.1034 22.5865 11.9655C22.5865 11.8965 22.5865 11.8276 22.5175 11.8276Z"
-                          fill="#5C5F61"/>
-                </svg>
-            </button>
+<div class="relative overflow-x-hidden">
+    <header>
+        <div class="header container flex px-4 py-3 gap-2 items-center">
+            <div class="grid grid-cols-3 items-center w-full">
+                <button class="justify-self-start flex lg:hidden">
+                    <svg fill="none" height="24" viewBox="0 0 24 25" width="24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 7.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
+                        <path d="M3 12.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
+                        <path d="M3 17.5H21" stroke="#292D32" stroke-linecap="round" stroke-width="1.5"/>
+                    </svg>
+                </button>
+                <div class="justify-self-center flex gap-[4.5rem] items-center">
+                    <a class="font-semibold text-16 lg:text-20 text-[#141414] text-nowrap"
+                       href="#">
+                        کوئرا لیست
+                    </a>
+                    <nav class="hidden lg:flex gap-[72px] items-center font-semibold text-16 whitespace-nowrap">
+                        <a class="text-primary" href="#">صفحه اصلی</a>
+                        <a class="text-[#666666]" href="#">درباره ما</a>
+                        <a class="text-[#666666]" href="#">ارتباط با ما</a>
+                    </nav>
+                </div>
+                <!--<div class="flex flex-2 lg:hidden">
+                    <div class="w-6 h-6"></div>
+                </div>-->
+                <div class="header__utility items-center gap-4 hidden lg:flex">
+                    <button
+                            class="header__utility__login-button bg-primary rounded-md gap-[51px] h-10 px-6 py-2">
+                        <span class="text-neutral-11 font-semibold text-16">ورود به اپلیکیشن</span>
+                    </button>
+                    <button class="header__utility__dark-mode-button rounded-md border border-[#E3E3E3] w-10 h-10">
+                        <svg class="m-auto" fill="none" height="24" viewBox="0 0 24 24" width="24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5856 17.1379V6.93105C12.5856 6.79312 12.5166 6.72415 12.3787 6.72415C9.41319 6.72415 7.06836 9.06898 7.06836 12.0345C7.06836 15 9.41319 17.3448 12.3787 17.3448C12.4477 17.4138 12.5856 17.2759 12.5856 17.1379Z"
+                                  fill="#5C5F61"/>
+                            <path d="M17.9653 11.8965C17.8274 9.34482 16.0343 7.27585 13.5515 6.86206C13.4136 6.86206 13.3446 6.93103 13.2756 7.06896C13.2756 7.13792 13.2756 7.20689 13.3446 7.27585C14.7929 8.3793 15.6894 10.1034 15.6894 11.9655C15.8963 13.9655 14.9998 15.8965 13.3446 17.069C13.2756 17.1379 13.2067 17.2759 13.2756 17.3448C13.3446 17.4138 13.4136 17.4138 13.4825 17.4138C13.4825 17.4138 13.4825 17.4138 13.5515 17.4138C16.1722 16.931 18.0343 14.5862 17.9653 11.8965Z"
+                                  fill="#5C5F61"/>
+                            <path d="M12.3105 5.55172C12.6553 5.55172 12.8622 5.27586 12.8622 5V1.55172C12.8622 1.2069 12.5864 1 12.3105 1C11.9657 1 11.7588 1.27586 11.7588 1.55172V4.93103C11.7588 5.27586 12.0347 5.55172 12.3105 5.55172Z"
+                                  fill="#5C5F61"/>
+                            <path d="M6.93066 7.4138C7.13756 7.62069 7.48239 7.62069 7.75825 7.4138C7.96515 7.2069 7.96515 6.86207 7.75825 6.58621L5.41342 4.24138C5.20653 4.03449 4.8617 4.03449 4.58584 4.24138C4.37894 4.44828 4.37894 4.79311 4.58584 5.06897L6.93066 7.4138Z"
+                                  fill="#5C5F61"/>
+                            <path d="M12.3105 18.5172C11.9657 18.5172 11.7588 18.7931 11.7588 19.069V22.4483C11.7588 22.7931 12.0347 23 12.3105 23C12.5864 23 12.8622 22.7241 12.8622 22.4483V19.069C12.9312 18.7931 12.6553 18.5172 12.3105 18.5172Z"
+                                  fill="#5C5F61"/>
+                            <path d="M7.34446 16.4483C7.20653 16.4483 7.06859 16.5172 6.93066 16.5862L4.58584 18.931C4.37894 19.1379 4.37894 19.4828 4.58584 19.7586C4.79273 19.9655 5.13756 19.9655 5.41342 19.7586L7.75825 17.4138C7.96515 17.2069 7.96515 16.8621 7.75825 16.5862C7.62032 16.5172 7.48239 16.4483 7.34446 16.4483Z"
+                                  fill="#5C5F61"/>
+                            <path d="M5.82759 12.0345C5.82759 11.6897 5.55172 11.4828 5.27586 11.4828H1.55172C1.2069 11.4828 1 11.7586 1 12.1034C1 12.3793 1.27586 12.6552 1.55172 12.6552H5.2069C5.55172 12.5862 5.82759 12.3793 5.82759 12.0345Z"
+                                  fill="#5C5F61"/>
+                            <path d="M19.2755 5.55173C18.5858 5.34484 18.4479 5.20691 18.31 4.31036C18.31 4.24139 18.241 4.17242 18.172 4.17242C18.1031 4.17242 18.0341 4.24139 18.0341 4.31036C17.8962 5.20691 17.7582 5.34484 17.0686 5.55173C16.9996 5.55173 16.9307 5.68967 16.9307 5.75863C16.9307 5.8276 16.9996 5.8276 17.0686 5.89656C17.7582 6.10346 17.8962 6.24139 18.0341 7.13794C18.0341 7.20691 18.1031 7.27587 18.172 7.27587C18.241 7.27587 18.31 7.20691 18.31 7.13794C18.4479 6.24139 18.5858 6.10346 19.2755 5.89656C19.3445 5.89656 19.4134 5.75863 19.4134 5.68967C19.3445 5.55173 19.3445 5.55173 19.2755 5.55173Z"
+                                  fill="#5C5F61"/>
+                            <path d="M19.2755 18.5172C18.5858 18.3104 18.4479 18.1724 18.31 17.2759C18.31 17.2069 18.241 17.1379 18.172 17.1379C18.1031 17.1379 18.0341 17.2069 18.0341 17.2759C17.8962 18.1724 17.7582 18.3104 17.0686 18.5172C16.9996 18.5172 16.9307 18.6552 16.9307 18.7241C16.9307 18.7931 16.9996 18.7931 17.0686 18.8621C17.7582 19.069 17.8962 19.2069 18.0341 20.1035C18.0341 20.1724 18.1031 20.2414 18.172 20.2414C18.241 20.2414 18.31 20.1724 18.31 20.1035C18.4479 19.2069 18.5858 19.069 19.2755 18.8621C19.3445 18.8621 19.4134 18.7931 19.4134 18.7241C19.4134 18.5862 19.3445 18.5172 19.2755 18.5172Z"
+                                  fill="#5C5F61"/>
+                            <path d="M22.5175 11.8276C21.552 11.5517 21.4141 11.2759 21.2072 10.1034C21.2072 10.0345 21.1382 9.96552 21.0692 9.96552C21.0003 9.96552 20.9313 10.0345 20.9313 10.1034C20.7244 11.2759 20.5175 11.4828 19.552 11.7586C19.483 11.7586 19.4141 11.8276 19.4141 11.9655C19.4141 12.0345 19.483 12.0345 19.483 12.1034C20.4485 12.3793 20.5865 12.6552 20.7934 13.8276C20.7934 13.8965 20.8623 13.9655 20.9313 13.9655C21.0003 13.9655 21.0692 13.8965 21.0692 13.8276C21.2761 12.6552 21.483 12.4483 22.4485 12.1724C22.5175 12.1724 22.5865 12.1034 22.5865 11.9655C22.5865 11.8965 22.5865 11.8276 22.5175 11.8276Z"
+                                  fill="#5C5F61"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
     <main>
-        <div class="mx-4 flex flex-col items-center gap-1 mt-[70px]">
-            <p class="z-10 font-regular text-24 text-[#141414] h-[43px]">
-                تمرکز رو وارد زندگیت کن
-            </p>
-            <p class="z-10 font-medium text-28 text-[#141414] h-[50px]">
-                به سمت
-                <span>اهدافت</span>
-                اوج بگیر
-            </p>
-        </div>
-        <p class="font-regular text-12 text-[#141414] mt-16 mx-6">
-            زمان در یک روز برای ما محدود است، اما مهمترین کار این است که چگونه از آن استفاده می‌کنیم. با اپلیکیشن کوییرا
-            لیست، زمان خود را با هدف و برنامه‌ریزی موثر سپری کنید."
-        </p>
-        <div class="flex gap-4 mx-4 mt-8">
-            <button class="w-full h-10 rounded-lg px-6 py-2 bg-primary hover:bg-[#F88D7D] font-semibold text-12 text-neutral-11 text-center">
-                <span>
-                    ورود به اپلیکیشن
-                </span>
-            </button>
-            <button class="w-full h-10 rounded-lg px-6 py-2 bg-[#EBF3FE] hover:bg-[#F88D7D] font-semibold text-12 text-primary text-center">
-                <span>
-                    درباره ما
-                </span>
-            </button>
-        </div>
-        <div class="mx-4 mt-10">
-            <img alt="Quera List" class="w-full rounded-t-[3.51px] mx-auto drop-shadow-[63_0px_4px_rgba(0,0,0,0.04)]"
-                 src="/assets/images/quera_list.png">
-        </div>
-        <div class="mx-4 mt-12 flex flex-col gap-6">
-            <div class="flex flex-col gap-2 mx-2">
-                <p class="font-semibold text-20 text-on-background-light">ویژگی‌های اپلیکیشن کوئرالیست</p>
-                <p class="font-regular text-10 text-[#141414]">زمان در یک روز برای ما محدود است، اما مهمترین کار این است
-                    که چگونه از آن استفاده می‌کنیم. با اپلیکیشن کوییرا لیست، زمان خود را با هدف و برنامه‌ریزی موثر سپری
-                    کنید."</p>
+        <section>
+            <div class="container">
+                <div class="mt-[4.375rem] flex flex-col items-center gap-1">
+                    <p class="z-10 font-regular text-24 text-[#141414] text-nowrap">
+                        تمرکز رو وارد زندگیت کن
+                    </p>
+                    <p class="z-10 font-medium text-28 text-[#141414] text-nowrap">
+                        به سمت
+                        <span>اهدافت</span>
+                        اوج بگیر
+                    </p>
+                </div>
+                <p class="mt-16 mx-6 font-regular text-12 text-[#141414]">
+                    زمان در یک روز برای ما محدود است، اما مهمترین کار این است که چگونه از آن استفاده می‌کنیم. با
+                    اپلیکیشن کوییرا
+                    لیست، زمان خود را با هدف و برنامه‌ریزی موثر سپری کنید."
+                </p>
+                <div class="flex gap-4 justify-between mx-4 mt-8">
+                    <button class="flex-1 h-10 rounded-lg bg-primary hover:bg-[#F88D7D] font-semibold text-12 text-neutral-11 text-nowrap">
+                        ورود به اپلیکیشن
+                    </button>
+                    <button class="flex-1 h-10 rounded-lg bg-[#EBF3FE] hover:bg-[#F88D7D] font-semibold text-12 text-primary text-nowrap">
+                        درباره ما
+                    </button>
+                </div>
             </div>
-            <div class="flex flex-wrap justify-center gap-4">
-                <div class="rounded-3xl border px-3 py-4 bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
-                    <div class="flex flex-col items-center gap-2.5">
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex items-center justify-center rounded-[80px] w-10 h-10 bg-[#F5FBFF]">
-                                <svg fill="none" height="16" viewBox="0 0 16 16" width="16"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_46_3455)">
-                                        <path d="M7.3125 1.33301H5.97917C2.64583 1.33301 1.3125 2.66634 1.3125 5.99967V9.99967C1.3125 13.333 2.64583 14.6663 5.97917 14.6663H9.97917C13.3125 14.6663 14.6458 13.333 14.6458 9.99967V8.66634"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M14.5824 2.37315C13.7624 4.41982 11.7024 7.20649 9.9824 8.58649L8.92906 9.42649C8.79573 9.52649 8.6624 9.60649 8.50906 9.66649C8.50906 9.56649 8.5024 9.46649 8.48906 9.35982C8.42906 8.91315 8.22906 8.49315 7.86906 8.13982C7.5024 7.77315 7.0624 7.56649 6.60906 7.50649C6.5024 7.49982 6.39573 7.49315 6.28906 7.49982C6.34906 7.33315 6.43573 7.17982 6.54906 7.05315L7.38906 5.99982C8.76906 4.27982 11.5624 2.20649 13.6024 1.38649C13.9157 1.26649 14.2224 1.35982 14.4157 1.55315C14.6157 1.75315 14.7091 2.05982 14.5824 2.37315Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M8.51485 9.66064C8.51485 10.2473 8.28819 10.8073 7.86819 11.234C7.54152 11.5606 7.10152 11.7873 6.57485 11.854L5.26152 11.994C4.54819 12.074 3.93485 11.4673 4.01485 10.7406L4.15485 9.42731C4.28152 8.26064 5.25485 7.51397 6.29485 7.49397C6.40152 7.48731 6.50819 7.49397 6.61485 7.50064C7.06819 7.56064 7.50819 7.76731 7.87485 8.13397C8.23485 8.49397 8.43485 8.90731 8.49485 9.35397C8.50819 9.46064 8.51485 9.56731 8.51485 9.66064Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.5501 7.98663C10.5501 6.59329 9.42344 5.45996 8.02344 5.45996"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_46_3455">
-                                            <rect fill="white" height="16" width="16"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <p class="font-bold text-12 text-[#070D31]">رابط کاربری جذاب</p>
-                        </div>
-                        <p class="w-[130px] font-regular text-10 text-[#444749]">
-                            اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
-                        </p>
-                    </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="mx-4 mt-10">
+                    <img alt="Quera List"
+                         class="w-full rounded-t-[0.219375rem] drop-shadow-[63_0px_4px_rgba(0,0,0,0.04)]"
+                         src="/assets/images/quera_list.png">
                 </div>
-                <div class="rounded-3xl border px-3 py-4 bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
-                    <div class="flex flex-col items-center gap-2.5">
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex items-center justify-center rounded-[80px] w-10 h-10 bg-[#F5FBFF]">
-                                <svg fill="none" height="16" viewBox="0 0 16 16" width="16"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_46_3455)">
-                                        <path d="M7.3125 1.33301H5.97917C2.64583 1.33301 1.3125 2.66634 1.3125 5.99967V9.99967C1.3125 13.333 2.64583 14.6663 5.97917 14.6663H9.97917C13.3125 14.6663 14.6458 13.333 14.6458 9.99967V8.66634"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M14.5824 2.37315C13.7624 4.41982 11.7024 7.20649 9.9824 8.58649L8.92906 9.42649C8.79573 9.52649 8.6624 9.60649 8.50906 9.66649C8.50906 9.56649 8.5024 9.46649 8.48906 9.35982C8.42906 8.91315 8.22906 8.49315 7.86906 8.13982C7.5024 7.77315 7.0624 7.56649 6.60906 7.50649C6.5024 7.49982 6.39573 7.49315 6.28906 7.49982C6.34906 7.33315 6.43573 7.17982 6.54906 7.05315L7.38906 5.99982C8.76906 4.27982 11.5624 2.20649 13.6024 1.38649C13.9157 1.26649 14.2224 1.35982 14.4157 1.55315C14.6157 1.75315 14.7091 2.05982 14.5824 2.37315Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M8.51485 9.66064C8.51485 10.2473 8.28819 10.8073 7.86819 11.234C7.54152 11.5606 7.10152 11.7873 6.57485 11.854L5.26152 11.994C4.54819 12.074 3.93485 11.4673 4.01485 10.7406L4.15485 9.42731C4.28152 8.26064 5.25485 7.51397 6.29485 7.49397C6.40152 7.48731 6.50819 7.49397 6.61485 7.50064C7.06819 7.56064 7.50819 7.76731 7.87485 8.13397C8.23485 8.49397 8.43485 8.90731 8.49485 9.35397C8.50819 9.46064 8.51485 9.56731 8.51485 9.66064Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.5501 7.98663C10.5501 6.59329 9.42344 5.45996 8.02344 5.45996"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_46_3455">
-                                            <rect fill="white" height="16" width="16"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <p class="font-bold text-12 text-[#070D31]">قابلیت دسته‌بندی کارها</p>
-                        </div>
-                        <p class="w-[130px] font-regular text-10 text-[#444749]">
-                            اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
-                        </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="mx-4 mt-12 flex flex-col gap-6">
+                    <div class="flex flex-col gap-2 mx-2">
+                        <p class="font-semibold text-20 text-on-background-light">ویژگی‌های اپلیکیشن کوئرالیست</p>
+                        <p class="font-regular text-10 text-[#141414]">زمان در یک روز برای ما محدود است، اما مهمترین کار
+                            این است
+                            که چگونه از آن استفاده می‌کنیم. با اپلیکیشن کوییرا لیست، زمان خود را با هدف و برنامه‌ریزی
+                            موثر سپری
+                            کنید."</p>
                     </div>
-                </div>
-                <div class="rounded-3xl border px-3 py-4 bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
-                    <div class="flex flex-col items-center gap-2.5">
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex items-center justify-center rounded-[80px] w-10 h-10 bg-[#F5FBFF]">
-                                <svg fill="none" height="16" viewBox="0 0 16 16" width="16"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_46_3455)">
-                                        <path d="M7.3125 1.33301H5.97917C2.64583 1.33301 1.3125 2.66634 1.3125 5.99967V9.99967C1.3125 13.333 2.64583 14.6663 5.97917 14.6663H9.97917C13.3125 14.6663 14.6458 13.333 14.6458 9.99967V8.66634"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M14.5824 2.37315C13.7624 4.41982 11.7024 7.20649 9.9824 8.58649L8.92906 9.42649C8.79573 9.52649 8.6624 9.60649 8.50906 9.66649C8.50906 9.56649 8.5024 9.46649 8.48906 9.35982C8.42906 8.91315 8.22906 8.49315 7.86906 8.13982C7.5024 7.77315 7.0624 7.56649 6.60906 7.50649C6.5024 7.49982 6.39573 7.49315 6.28906 7.49982C6.34906 7.33315 6.43573 7.17982 6.54906 7.05315L7.38906 5.99982C8.76906 4.27982 11.5624 2.20649 13.6024 1.38649C13.9157 1.26649 14.2224 1.35982 14.4157 1.55315C14.6157 1.75315 14.7091 2.05982 14.5824 2.37315Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M8.51485 9.66064C8.51485 10.2473 8.28819 10.8073 7.86819 11.234C7.54152 11.5606 7.10152 11.7873 6.57485 11.854L5.26152 11.994C4.54819 12.074 3.93485 11.4673 4.01485 10.7406L4.15485 9.42731C4.28152 8.26064 5.25485 7.51397 6.29485 7.49397C6.40152 7.48731 6.50819 7.49397 6.61485 7.50064C7.06819 7.56064 7.50819 7.76731 7.87485 8.13397C8.23485 8.49397 8.43485 8.90731 8.49485 9.35397C8.50819 9.46064 8.51485 9.56731 8.51485 9.66064Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.5501 7.98663C10.5501 6.59329 9.42344 5.45996 8.02344 5.45996"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_46_3455">
-                                            <rect fill="white" height="16" width="16"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="flex justify-center items-center px-[0.6875rem] py-[0.9375rem] gap-2 rounded-3xl border bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
+                            <div class="flex flex-col items-center justify-between gap-2.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <div class="flex items-center justify-center rounded-[5rem] w-10 h-10 bg-[#F5FBFF]">
+                                        <svg fill="none" height="16" viewBox="0 0 16 16" width="16"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_46_3455)">
+                                                <path d="M7.3125 1.33301H5.97917C2.64583 1.33301 1.3125 2.66634 1.3125 5.99967V9.99967C1.3125 13.333 2.64583 14.6663 5.97917 14.6663H9.97917C13.3125 14.6663 14.6458 13.333 14.6458 9.99967V8.66634"
+                                                      stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14.5824 2.37315C13.7624 4.41982 11.7024 7.20649 9.9824 8.58649L8.92906 9.42649C8.79573 9.52649 8.6624 9.60649 8.50906 9.66649C8.50906 9.56649 8.5024 9.46649 8.48906 9.35982C8.42906 8.91315 8.22906 8.49315 7.86906 8.13982C7.5024 7.77315 7.0624 7.56649 6.60906 7.50649C6.5024 7.49982 6.39573 7.49315 6.28906 7.49982C6.34906 7.33315 6.43573 7.17982 6.54906 7.05315L7.38906 5.99982C8.76906 4.27982 11.5624 2.20649 13.6024 1.38649C13.9157 1.26649 14.2224 1.35982 14.4157 1.55315C14.6157 1.75315 14.7091 2.05982 14.5824 2.37315Z"
+                                                      stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.51485 9.66064C8.51485 10.2473 8.28819 10.8073 7.86819 11.234C7.54152 11.5606 7.10152 11.7873 6.57485 11.854L5.26152 11.994C4.54819 12.074 3.93485 11.4673 4.01485 10.7406L4.15485 9.42731C4.28152 8.26064 5.25485 7.51397 6.29485 7.49397C6.40152 7.48731 6.50819 7.49397 6.61485 7.50064C7.06819 7.56064 7.50819 7.76731 7.87485 8.13397C8.23485 8.49397 8.43485 8.90731 8.49485 9.35397C8.50819 9.46064 8.51485 9.56731 8.51485 9.66064Z"
+                                                      stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M10.5501 7.98663C10.5501 6.59329 9.42344 5.45996 8.02344 5.45996"
+                                                      stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_46_3455">
+                                                    <rect fill="white" height="16" width="16"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <p class="h-[1.375rem] font-bold text-12 text-[#070D31]">رابط کاربری جذاب</p>
+                                </div>
+                                <p class="w-[8.25rem] h-12 font-regular text-10 text-[#444749]">
+                                    اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
+                                </p>
                             </div>
-                            <p class="font-bold text-12 text-[#070D31]">دسترسی آسان</p>
                         </div>
-                        <p class="w-[130px] font-regular text-10 text-[#444749]">
-                            اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
-                        </p>
-                    </div>
-                </div>
-                <div class="rounded-3xl border px-3 py-4 bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
-                    <div class="flex flex-col items-center gap-2.5">
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex items-center justify-center rounded-[80px] w-10 h-10 bg-[#F5FBFF]">
-                                <svg fill="none" height="16" viewBox="0 0 16 16" width="16"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_46_3455)">
-                                        <path d="M7.3125 1.33301H5.97917C2.64583 1.33301 1.3125 2.66634 1.3125 5.99967V9.99967C1.3125 13.333 2.64583 14.6663 5.97917 14.6663H9.97917C13.3125 14.6663 14.6458 13.333 14.6458 9.99967V8.66634"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M14.5824 2.37315C13.7624 4.41982 11.7024 7.20649 9.9824 8.58649L8.92906 9.42649C8.79573 9.52649 8.6624 9.60649 8.50906 9.66649C8.50906 9.56649 8.5024 9.46649 8.48906 9.35982C8.42906 8.91315 8.22906 8.49315 7.86906 8.13982C7.5024 7.77315 7.0624 7.56649 6.60906 7.50649C6.5024 7.49982 6.39573 7.49315 6.28906 7.49982C6.34906 7.33315 6.43573 7.17982 6.54906 7.05315L7.38906 5.99982C8.76906 4.27982 11.5624 2.20649 13.6024 1.38649C13.9157 1.26649 14.2224 1.35982 14.4157 1.55315C14.6157 1.75315 14.7091 2.05982 14.5824 2.37315Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M8.51485 9.66064C8.51485 10.2473 8.28819 10.8073 7.86819 11.234C7.54152 11.5606 7.10152 11.7873 6.57485 11.854L5.26152 11.994C4.54819 12.074 3.93485 11.4673 4.01485 10.7406L4.15485 9.42731C4.28152 8.26064 5.25485 7.51397 6.29485 7.49397C6.40152 7.48731 6.50819 7.49397 6.61485 7.50064C7.06819 7.56064 7.50819 7.76731 7.87485 8.13397C8.23485 8.49397 8.43485 8.90731 8.49485 9.35397C8.50819 9.46064 8.51485 9.56731 8.51485 9.66064Z"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.5501 7.98663C10.5501 6.59329 9.42344 5.45996 8.02344 5.45996"
-                                              stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_46_3455">
-                                            <rect fill="white" height="16" width="16"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                        <div class="flex justify-center items-center px-[0.6875rem] py-[0.9375rem] gap-2 rounded-3xl border bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
+                            <div class="flex flex-col items-center justify-between gap-2.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <div class="flex items-center justify-center rounded-[5rem] w-10 h-10 bg-[#F5FBFF]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.3335 6.66671H4.66683C6.00016 6.66671 6.66683 6.00004 6.66683 4.66671V3.33337C6.66683 2.00004 6.00016 1.33337 4.66683 1.33337H3.3335C2.00016 1.33337 1.3335 2.00004 1.3335 3.33337V4.66671C1.3335 6.00004 2.00016 6.66671 3.3335 6.66671Z" stroke="#2C7EF8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11.3335 6.66671H12.6668C14.0002 6.66671 14.6668 6.00004 14.6668 4.66671V3.33337C14.6668 2.00004 14.0002 1.33337 12.6668 1.33337H11.3335C10.0002 1.33337 9.3335 2.00004 9.3335 3.33337V4.66671C9.3335 6.00004 10.0002 6.66671 11.3335 6.66671Z" stroke="#2C7EF8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M11.3335 14.6667H12.6668C14.0002 14.6667 14.6668 14 14.6668 12.6667V11.3334C14.6668 10 14.0002 9.33337 12.6668 9.33337H11.3335C10.0002 9.33337 9.3335 10 9.3335 11.3334V12.6667C9.3335 14 10.0002 14.6667 11.3335 14.6667Z" stroke="#2C7EF8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.3335 14.6667H4.66683C6.00016 14.6667 6.66683 14 6.66683 12.6667V11.3334C6.66683 10 6.00016 9.33337 4.66683 9.33337H3.3335C2.00016 9.33337 1.3335 10 1.3335 11.3334V12.6667C1.3335 14 2.00016 14.6667 3.3335 14.6667Z" stroke="#2C7EF8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="h-[1.375rem] font-bold text-12 text-[#070D31]">قابلیت دسته‌بندی کارها</p>
+                                </div>
+                                <p class="w-[8.25rem] h-12 font-regular text-10 text-[#444749]">
+                                    اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
+                                </p>
                             </div>
-                            <p class="font-bold text-12 text-[#070D31]">پشتیبانی آنلاین</p>
                         </div>
-                        <p class="w-[130px] font-regular text-10 text-[#444749]">
-                            اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
-                        </p>
+                        <div class="flex justify-center items-center px-[0.6875rem] py-[0.9375rem] gap-2 rounded-3xl border bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
+                            <div class="flex flex-col items-center justify-between gap-2.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <div class="flex items-center justify-center rounded-[5rem] w-10 h-10 bg-[#F5FBFF]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.4133 5.66004C3.72664 -0.113291 12.28 -0.106624 13.5866 5.66671C14.3533 9.05338 12.2466 11.92 10.4 13.6934C9.05997 14.9867 6.93997 14.9867 5.5933 13.6934C3.7533 11.92 1.64664 9.04671 2.4133 5.66004Z" stroke="#2C7EF8"/>
+                                            <path d="M6.1665 7.66667L7.1665 8.66667L9.83317 6" stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="h-[1.375rem] font-bold text-12 text-[#070D31]">دسترسی آسان</p>
+                                </div>
+                                <p class="w-[8.25rem] h-12 font-regular text-10 text-[#444749]">
+                                    اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center px-[0.6875rem] py-[0.9375rem] gap-2 rounded-3xl border bg-neutral-11 border-neutral-9 drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
+                            <div class="flex flex-col items-center justify-between gap-2.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <div class="flex items-center justify-center rounded-[5rem] w-10 h-10 bg-[#F5FBFF]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12.5734H11.4933C10.96 12.5734 10.4533 12.78 10.08 13.1534L8.93998 14.28C8.41998 14.7934 7.57334 14.7934 7.05334 14.28L5.91333 13.1534C5.54 12.78 5.02667 12.5734 4.5 12.5734H4C2.89333 12.5734 2 11.6867 2 10.5934V3.31337C2 2.22004 2.89333 1.33337 4 1.33337H12C13.1067 1.33337 14 2.22004 14 3.31337V10.5867C14 11.68 13.1067 12.5734 12 12.5734Z" stroke="#2C7EF8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.04671 5.9667C8.02005 5.9667 7.98003 5.9667 7.9467 5.9667C7.2467 5.94003 6.69336 5.37337 6.69336 4.6667C6.69336 3.9467 7.27337 3.3667 7.99337 3.3667C8.71337 3.3667 9.29338 3.95337 9.29338 4.6667C9.30004 5.37337 8.74671 5.9467 8.04671 5.9667Z" stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.16646 7.97339C5.2798 8.56672 5.2798 9.53339 6.16646 10.1267C7.17313 10.8001 8.82646 10.8001 9.83313 10.1267C10.7198 9.53339 10.7198 8.56672 9.83313 7.97339C8.82646 7.30672 7.1798 7.30672 6.16646 7.97339Z" stroke="#2C7EF8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="h-[1.375rem] font-bold text-12 text-[#070D31]">پشتیبانی آنلاین</p>
+                                </div>
+                                <p class="w-[8.25rem] h-12 font-regular text-10 text-[#444749]">
+                                    اگه از سردرگمی و بی برنامگی خسته شدی این اپلیکیشن مخصوص خودته!
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="flex flex-col items-center mt-12 mx-4 gap-[1.1875rem]">
+                    <div class="flex flex-col items-center gap-[1.1875rem]">
+                        <div class="flex flex-col items-center gap-6 w-full">
+                            <div class="flex flex-col items-center gap-2">
+                                <p class="font-regular text-10 text-[#141414]">
+                                    اپلیکیشن اندروید و IOS
+                                </p>
+                                <p class="font-semibold text-20 text-on-background-light">
+                                    دانلود اپلیکیشن
+                                </p>
+                            </div>
+                            <img class="w-[57.9268292%]" src="/assets/images/Mobile_clay_mockup.png" alt="Mobile clay mockup">
+                        </div>
+                        <p class="px-2 font-regular text-10 text-[#141414]">
+                            کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+                            <br>
+                            همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+                        </p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button class="flex items-center px-4 py-2 gap-2.5 rounded-lg">
+                            <i class="font-semibold text-12 text-primary text-right">
+                                ورود به اپلیکیشن
+                            </i>
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0698 18.0699L3.99982 11.9999L10.0698 5.92995" stroke="#2C7EF8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12L4.17 12" stroke="#2C7EF8" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="shapes">
-            <div class="shapes__rectangle -z-40 w-full h-[583px] absolute top-[49px]"></div>
+            <div class="shapes__rectangle -z-40 w-full h-[36.4375rem] absolute top-[49px]"></div>
             <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[228px] h-[228px] absolute top-[390px] left-[434px] opacity-50 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
             <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[228px] h-[228px] absolute top-[291px] left-[114px] opacity-50 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
             <div class="shapes__circle rounded-full -z-10 -translate-x-full -translate-y-full w-[265px] h-[265px] absolute top-[1229px] left-[476px] opacity-30 rotate-180 drop-shadow-[16_-3px_4px_rgba(0,0,0,0)]"></div>
