@@ -80,38 +80,51 @@
                         چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.
                     </h2>
                 </div>
-                <div class="flex flex-col gap-6 mt-6 mx-4 p-4 border rounded-2xl bg-neutral-11 border-[#f5f6f8] drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
-                    <form class="flex flex-col gap-4">
+                <form method="post" class="flex flex-col gap-6 mt-6 mx-4 p-4 border rounded-2xl bg-neutral-11 border-[#f5f6f8] drop-shadow-[63_0px_4px_rgba(0,0,0,0.03)]">
+                    <div class="flex flex-col gap-4">
                         <div class="flex gap-4 justify-between">
                             <div class="flex flex-col gap-2 items-start w-full">
-                                <label for="name" class="font-semibold text-12 text-[#070d31]">نام:</label>
-                                <input type="text" id="name" class="w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" placeholder="نام شما">
+                                <label class="font-semibold text-12 text-[#070d31]" for="name">نام:</label>
+                                <input class="w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" id="name"
+                                       placeholder="نام شما"
+                                       type="text">
                             </div>
                             <div class="flex flex-col gap-2 items-start w-full">
-                                <label for="last_name" class="font-semibold text-12 text-[#070d31]">نام خانوادگی:</label>
-                                <input type="text" id="last_name" class="w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" placeholder="نام خانوادگی شما">
+                                <label class="font-semibold text-12 text-[#070d31]" for="last_name">نام
+                                    خانوادگی:</label>
+                                <input class="w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" id="last_name"
+                                       placeholder="نام خانوادگی شما"
+                                       type="text">
                             </div>
                         </div>
                         <div class="flex gap-4 justify-between">
                             <div class="flex flex-col gap-2 items-start w-full">
-                                <label for="mail" class="font-semibold text-12 text-[#070d31]">ایمیل:</label>
-                                <input type="email" id="mail" class="w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" placeholder="ایمیل">
+                                <label class="font-semibold text-12 text-[#070d31]" for="mail">ایمیل:</label>
+                                <input class="w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" id="mail"
+                                       placeholder="ایمیل"
+                                       type="email">
                             </div>
                         </div>
                         <div class="flex gap-4 justify-between">
                             <div class="flex flex-col gap-2 items-start w-full">
-                                <label for="phone" class="font-semibold text-12 text-[#070d31]">شماره تماس:</label>
-                                <input type="tel" id="phone" class="text-right w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" placeholder="شماره تماس شما">
+                                <label class="font-semibold text-12 text-[#070d31]" for="phone">شماره تماس:</label>
+                                <input class="text-right w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" id="phone"
+                                       placeholder="شماره تماس شما"
+                                       type="tel">
                             </div>
                         </div>
                         <div class="flex gap-4 justify-between">
                             <div class="flex flex-col gap-2 items-start w-full">
-                                <label for="message" class="font-semibold text-12 text-[#070d31]">متن پیام شما:</label>
-                                <input type="text" id="message" class="h-32 w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" placeholder="متن پیام شما">
+                                <label class="font-semibold text-12 text-[#070d31]" for="message">متن پیام شما:</label>
+                                <input class="h-32 w-full rounded-[0.375rem] border py-[0.6875rem] px-2 border-[#e6e6e6] font-semibold text-12 text-[#bbbbbb]" id="message"
+                                       placeholder="متن پیام شما"
+                                       type="text">
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <input class="px-10 py-2 rounded-lg bg-primary hover:bg-[#F88D7D] font-semibold text-12 text-neutral-11" type="submit"
+                           value="ارسال پیام">
+                </form>
             </div>
         </section>
     </main>
