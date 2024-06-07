@@ -42,9 +42,7 @@ module.exports = {
                 '32': ['2rem', {lineHeight: '3.1rem'}],
                 '36': ['2.25rem', {lineHeight: '3.4875rem'}],
                 '42': ['2.625rem', {lineHeight: '4.0688rem'}]
-            }, screens: {
-                'sm': '360px',
-            },
+            }
         },
     }
 }
